@@ -18,6 +18,18 @@ chicago.csv
 new_york_city.csv
 washington.csv
 
+
+The application will prompt you to select a city, month, and day to analyze.
+After selecting the options, the application will display the following information:
+Total number of trips
+Average duration of trips
+Most popular start station
+Most popular end station
+Most popular trip
+Breakdown of trip usage by user type
+Breakdown of trip usage by gender (if available)
+Earliest, most recent, and most common birth year (if available)
+
 Credits
 Pandas documentation is very usefull.
 Numpy documentation. (if needed)
