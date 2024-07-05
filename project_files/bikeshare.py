@@ -87,18 +87,27 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
-    common_month = df['month'].mode()[0]
-    print("Most Common Month:", calendar.month_name[common_month])
+    try:
+        # TO DO: display the most common month
+        common_month = df['month'].mode()[0]
+        print("Most Common Month:", calendar.month_name[common_month])
+    except:
+        print("Unable to determine the most common month.")
 
-    # TO DO: display the most common day of week
-    common_day = df['day_of_week'].mode()[0]
-    print("Most Common Day of Week:", common_day)
+    try:
+        # TO DO: display the most common day of week
+        common_day = df['day_of_week'].mode()[0]
+        print("Most Common Day of Week:", common_day)
+    except:
+        print("Unable to determine the most common day of week.")
 
-    # TO DO: display the most common start hour
-    df['Start Hour'] = df['Start Time'].dt.hour    
-    print('The most common start hour for your selection is', 
-          df['Start Hour'].value_counts().idxmax(), 'o\'clock.\n')
+    try:
+        # TO DO: display the most common start hour
+        df['Start Hour'] = df['Start Time'].dt.hour    
+        print('The most common start hour for your selection is', 
+              df['Start Hour'].value_counts().idxmax(), 'o\'clock.\n')
+    except:
+        print("Unable to determine the most common start hour.")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
