@@ -48,14 +48,14 @@ def get_filters():
 
 def load_data(city, month, day):
     """
-    Loads data for the specified city and filters by month and day if applicable.
+  Loads data for the specified city and filters by month and day if applicable.
 
     Args:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
+        city (str): name of the city to analyze
+        month (str): name of the month to filter by, or "all" to apply no month filter
+        day (str): name of the day of the week to filter by, or "all" to apply no day filter
     Returns:
-        df - Pandas DataFrame containing city data filtered by month and day
+        df (pandas.DataFrame): Pandas DataFrame containing city data filtered by month and day
     """
     # Load the data file for the specified city
     df = pd.read_csv(CITY_DATA[city])
